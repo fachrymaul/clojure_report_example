@@ -1,0 +1,102 @@
+(use '(reporting-example.models.db))
+(sql/with-connection
+  db
+  (create-employee-table)
+  (sql/insert-rows
+   :employee
+   ["Albert Einstein", "Engineer", "Ulm", "Germany"]
+   ["Alfred Hitchcock", "Movie Director", "London", "UK"]
+   ["Wernher Von Braun", "Rocket Scientist", "Wyrzysk", "Poland"]
+   ["Sigmund Freud", "Neurologist", "Pribor", "Czech Republic"]
+   ["Mahatma Gandhi", "Lawyer", "Gujarat", "India"]
+   ["Sachin Tendulkar", "Cricket Player", "Mumbai", "India"]
+   ["Michael Schumacher", "F1 Racer", "Cologne", "Germany"]))
+(use 'reporting-example.models.db)
+user=> (use 'reporting-example.models.db)
+(sql/with-connection
+  db
+  (create-employee-table)
+  (sql/insert-rows
+   :employee
+   ["Albert Einstein", "Engineer", "Ulm", "Germany"]
+   ["Alfred Hitchcock", "Movie Director", "London", "UK"]
+   ["Wernher Von Braun", "Rocket Scientist", "Wyrzysk", "Poland"]
+   ["Sigmund Freud", "Neurologist", "Pribor", "Czech Republic"]
+   ["Mahatma Gandhi", "Lawyer", "Gujarat", "India"]
+   ["Sachin Tendulkar", "Cricket Player", "Mumbai", "India"]
+   ["Michael Schumacher", "F1 Racer", "Cologne", "Germany"]))
+user=> (use 'reporting-example.models.db)
+(use 'reporting-example.models.db)
+(sql/with-connection
+  db
+  (create-employee-table)
+  (sql/insert-rows
+   :employee
+   ["Albert Einstein", "Engineer", "Ulm", "Germany"]
+   ["Alfred Hitchcock", "Movie Director", "London", "UK"]
+   ["Wernher Von Braun", "Rocket Scientist", "Wyrzysk", "Poland"]
+   ["Sigmund Freud", "Neurologist", "Pribor", "Czech Republic"]
+   ["Mahatma Gandhi", "Lawyer", "Gujarat", "India"]
+   ["Sachin Tendulkar", "Cricket Player", "Mumbai", "India"]
+   ["Michael Schumacher", "F1 Racer", "Cologne", "Germany"]))
+(require '[clojure.java.jdbc :as sql])
+(sql/with-connection
+db
+  (create-employee-table)
+  (sql/insert-rows
+   :employee
+   ["Albert Einstein", "Engineer", "Ulm", "Germany"]
+   ["Alfred Hitchcock", "Movie Director", "London", "UK"]
+   ["Wernher Von Braun", "Rocket Scientist", "Wyrzysk", "Poland"]
+   ["Sigmund Freud", "Neurologist", "Pribor", "Czech Republic"]
+   ["Mahatma Gandhi", "Lawyer", "Gujarat", "India"]
+   ["Sachin Tendulkar", "Cricket Player", "Mumbai", "India"]
+   ["Michael Schumacher", "F1 Racer", "Cologne", "Germany"]))
+(use 'reporting-example.models.db)
+(create-table)
+(use 'reporting-example.models.db)
+restart
+(restart
+(use 'reporting-example.models.db)
+(create-table)
+(use 'reporting-example.models.db)
+(create-table)
+(use 'reporting-example.models.db)
+(create-table)
+(use 'reporting-example.models.db)
+(create-table)
+(use 'reporting-example.models.db)
+(create-table)
+(read-employee)
+(use 'reporting-example.models.db)
+(read-employee)
+(user 'reporting-example.reports)
+(use 'reporting-example.reports)
+(use reporting-example.reports)
+(use 'reporting-example.reports)
+(pdf 
+[{:header "Wow that was easy"
+[:list
+[:chunk  {:style :bold} "a bold item"]
+"another item"
+"yet another item"]
+[:paragraph "I am a paragraph"]]
+(pdf 
+[{:header "Wow that was easy"
+}
+[:list
+[:chunk  {:style :bold} "a bold item"]
+"another item"
+"yet another item"]
+[:paragraph "I am a paragraph"]]
+"doc.pdf")
+(doc require)
+(require '(clj-pdf.core :refer [pdf template]))
+(clj-pdf.core/pdf 
+[{:header "Wow that was easy"}
+[:list
+[:chunk  {:style :bold} "a bold item"]
+"another item"
+"yet another item"]
+[:paragraph "I am a paragraph"]]
+"doc.pdf")
